@@ -1,0 +1,148 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  align-items: center;
+  background: linear-gradient(#f1f1f1, #767783);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  text-align: center;
+}
+
+.card-container {
+  background: rgba(173, 216, 230, 0.2);
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 30px 0 30px 0;
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+  width: 90vw;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: rgb(113, 126, 146);
+  border-radius: 5px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: rgb(154, 154, 206);
+  border-radius: 20px;
+  border: 3px solid rgb(77, 76, 76);
+}
+
+.card {
+  perspective: 1500px;
+}
+
+.card-inner {
+  cursor: pointer;
+  height: 500px;
+  margin: 15px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s linear;
+  width: 300px;
+}
+
+.card-top,
+.card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 49, 0.5);
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+.card-top {
+  align-items: center;
+  background-color: rgb(119, 119, 119);
+  color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.text-container,
+.description-container {
+  bottom: 0;
+  left: 0;
+  padding: 0 15px 15px 15px;
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+}
+
+.text-container {
+  background: linear-gradient(rgba(82, 82, 82, 0.7), rgba(1, 1, 1, 1));
+}
+
+.text-container h2 {
+  font-size: large;
+  margin: 10px 0;
+}
+
+.text-container p {
+  font-size: small;
+  margin: 10px 0;
+}
+
+.card-back {
+  background: linear-gradient(rgba(82, 82, 82, 0.7), rgba(1, 1, 1, 1));
+  color: rgb(237, 238, 238);
+  transform: rotateY(180deg);
+}
+
+.card-back h1 {
+  font-size: 1.7rem;
+  max-height: 15%;
+  overflow: hidden;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.description-container {
+  max-height: 80%;
+}
+.description-container h2 {
+  font-size: 1.05rem;
+}
